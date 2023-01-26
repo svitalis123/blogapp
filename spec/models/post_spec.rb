@@ -19,7 +19,7 @@ RSpec.describe Post, type: :model do
     subject.LikesCounter = nil
     expect(subject).to_not be_valid
   end
-  it 'postsCounter to be greater or equal than zero' do
+  it 'expect to respond to method' do
     expect(subject).to respond_to(:update_user_counter)
   end
 end

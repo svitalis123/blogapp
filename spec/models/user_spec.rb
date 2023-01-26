@@ -14,7 +14,7 @@ RSpec.describe User, type: :model do
     subject.PostsCounter = nil
     expect(subject).to_not be_valid
   end
-  it 'expect to return records more than 1' do
+  it 'expect to Respond to method' do
     expect(subject).to respond_to(:recent_three_posts)
   end
 end
