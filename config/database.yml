@@ -24,7 +24,7 @@ default: &default
 development:
   <<: *default
   database: blogapp_development
-  server: localhost
+  host: localhost
   username: vitalis
   password: 117112@vitalis
 
@@ -61,7 +61,7 @@ development:
 test:
   <<: *default
   database: blogapp_test
-  server: localhost
+  host: localhost
   username: vitalis
   password: 117112@vitalis
 
@@ -88,5 +88,6 @@ test:
 production:
   <<: *default
   database: blogapp_production
+  host: localhost
   username: vitalis
   password: <%= ENV["BLOGAPP_DATABASE_PASSWORD"] %>
