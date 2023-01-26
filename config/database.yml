@@ -88,5 +88,7 @@ test:
 production:
   <<: *default
   database: blogapp_production
-  username: blogapp
+  server: localhost
+  username: vitalis
+  password: 117112@vitalis
   password: <%= ENV["BLOGAPP_DATABASE_PASSWORD"] %>
