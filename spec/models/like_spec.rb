@@ -1,12 +1,28 @@
 require_relative '../rails_helper'
 RSpec.describe Like, type: :model do
-  subject do
-    user = User.new(Name: 'peter', Photo: 'https://123.com', Bio: 'hello bio', PostsCounter: 1)
-    post = Post.create(Title: 'men', Text: 'will', CommentsCounter: 1, LikesCounter: 1, users_id: user)
-    Like.create(user_id: user, posts_id: post)
-  end
+  user = User.create(
+    Name: 'VITS',
+    Photo: 'https:123',
+    Bio: 'A software developer based in Kenya',
+    PostsCounter: 0
+  )
 
-  it 'should return 1' do
-    expect(subject).to respond_to(:update_like_counter)
+  post = Post.create(
+    Title: 'my title',
+    Text: 'Hello World!',
+    CommentsCounter: 1,
+    LikesCounter: 0,
+    user_id: user.id
+  )
+
+  Like.create(
+    user_id: user.id,
+    post_id: post.id
+  )
+
+  context '#increment_post_likes_counter' do
+    it 'increments post likes counter by 1' do
+      expect(User.find(post.id).LikesCounter).to eq(1)
+    end
   end
 end
