@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'pages/blog'
+  resources :users do
+    resources :posts, only: [:show, :index]
+  end
+  # get 'pages/blog'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
