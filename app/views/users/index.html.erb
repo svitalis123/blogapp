@@ -1,1 +1,11 @@
-<h1>here are all users</h1>
+<div id="container"> 
+  <% @users.each do |user|%>
+    <div id="container_container">
+      <img id="container_container_img" src="<%= user.Photo %>" alt="user profile">
+      <div id="container_container_div">
+        <h3><%= user.Name %></h3>
+        <p>Number of posts: <%= user.PostsCounter %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
