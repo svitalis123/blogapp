@@ -1,11 +1,5 @@
 <div id="show_container_user">
-  <div id="container_container">
-      <img id="container_container_img" src="<%= @user.Photo %>" alt="user profile">
-      <div id="container_container_div">
-        <h3><%= @user.Name %></h3>
-        <p>Number of posts: <%= @user.PostsCounter %></p>
-      </div>
-    </div>
+  <%= render @user %>
   <div id="show_container_user_bio">
     <h4>Bio</h4>
     <p>
@@ -17,7 +11,7 @@
       laboris nisi ut aliquip ex ea commodo consequat.
     </p>
   </div>
-  <% @posts.each do |post|%>
+  <% @user.recent_three_posts.each do |post|%>
     <div id="show_container_user_id">
       <h3>Post #<%= post.id %></h3>
       <p><%= post.Text %></p>
@@ -25,6 +19,6 @@
     </div>
   <% end %>
   <div id="show_container_user_button_container">
-    <button id="show_container_user_button">See all posts</button>
+    <button id="show_container_user_button"><%= link_to "See all posts", "/" %></button>
   </div>
 </div>

@@ -6,7 +6,7 @@
         <p>Number of posts: <%= @user.PostsCounter %></p>
       </div>
     </div>
-    <% @posts.each do |post|%>
+    <% @posts[0...5].each do |post|%>
     <div id="show_container_user_id">
       <h3>Post #<%= post.id %></h3>
       <p><%= post.Text %></p>
