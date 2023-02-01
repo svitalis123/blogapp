@@ -35,7 +35,7 @@
 
 ## 🛠 Built With <a name="built-with"></a>
 
-### Tech Stack <a name="tech-stack"></a>
+### Ruby on Rails<a name="tech-stack"></a>
 
 > The Blog app will be a classic example of a blog website. It creates a fully functional website that shows the list of posts and empower readers to interact with them by adding comments and liking posts.
 
@@ -64,17 +64,14 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **[shows the list of posts and empower readers]**
+- **[Show posts and users and their comments through routing]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
 
 - [Live Demo Link](https://yourdeployedapplicationlink.com)
 
@@ -94,55 +91,26 @@ In order to run this project you need:
 - Ruby
 - Rails
 
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone https://github.com/svitalis123/blogapp.git
-```
---->
 git clone https://github.com/svitalis123/blogapp.git
 ### Install
 
 Install this project with:
-
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
-
+- Rspecs
 ### Usage
 
-To run the project, execute the following command:
-rails server
-<!--
-Example command:
 
-```sh
-  rails server
-```
---->
+> rails server
+
+
+
 
 ### Run tests
 
-To run tests, run the following command:
 bin/rails test test/models/article_test.rb
 <!--
 Example command:
@@ -154,23 +122,12 @@ Example command:
 
 ### Deployment
 
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-
-> Mention all of the collaborators of this project.
 
 👤 **Author1**
 
@@ -184,7 +141,7 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
+- **[Integration with react]**
 
 - [ ] **[Deployment]**
 
@@ -200,13 +157,9 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
-
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+If you like this project contribute and give feedback through the issues
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -216,11 +169,7 @@ If you like this project...
 
 > Give credit to everyone who inspired your codebase.
 
-I would like to thank...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
+I would like to thank Every peer who helped accomplish this project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -229,7 +178,5 @@ I would like to thank...
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./MIT.md) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
