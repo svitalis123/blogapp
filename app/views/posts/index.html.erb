@@ -1,1 +1,27 @@
-<h1> here are all posts </h1>
+<div id="container_index_posts">
+  <div id="container_container">
+      <img id="container_container_img" src="<%= @user.Photo %>" alt="user profile">
+      <div id="container_container_div">
+        <h3><%= @user.Name %></h3>
+        <p>Number of posts: <%= @user.PostsCounter %></p>
+      </div>
+    </div>
+    <% @posts[0...5].each do |post|%>
+    <div id="show_container_user_id">
+      <h3>Post #<%= post.id %></h3>
+      <p><%= post.Text %></p>
+      <h4>Comments <%= post.CommentsCounter %> likes: <%= post.LikesCounter %></h4>
+    </div>
+    <% @comments=Comment.where(post_id: post.id)%>
+    <div id="container_index_posts_comments_container">
+    <% @comments.each do |comment| %>
+        <div id="container_index_posts_comments">
+         <%= @user.Name%>: <%= comment.Text%>
+        </div>
+    <% end %>
+    </div>
+  <% end %>
+  <div id="show_container_post_button_container">
+    <button id="show_container_post_button">Pagination</button>
+  </div>
+</div>

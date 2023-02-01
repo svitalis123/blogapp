@@ -1,1 +1,15 @@
-<h1>here are the individual posts</h1>
+<div id="post_show_container">
+  <div id="post_show_container_upper">
+  <div id="post_show_container_header">
+    <h3>Post #<%= @post.id%> by <%=@user.Name%></h3>
+    <h5>Comments:<%= @post.CommentsCounter%> Likes: <%=@post.LikesCounter%></h5>
+  </div>
+  <p><%= @post.Text %></p>
+  </div>
+  <% @comments=Comment.where(post_id:@post.id) %>
+  <div id="container_index_posts_show_comments_container">
+    <% @comments.each do |comment| %>
+      <p><%=@user.Name%>: <%= comment.id %></p>
+    <% end %>
+  </div>
+</div>
