@@ -11,6 +11,9 @@
       <h3>Post #<%= post.id %></h3>
       <p><%= post.Text %></p>
       <h4>Comments <%= post.CommentsCounter %> likes: <%= post.LikesCounter %></h4>
+      <%= form_with url: "/users/#{@user.id}/posts/#{post.id}/likes" do |f| %>
+        <%= f.submit "like posts"%>
+      <% end %>
     </div>
     <% @comments=Comment.where(post_id: post.id)%>
     <div id="container_index_posts_comments_container">
