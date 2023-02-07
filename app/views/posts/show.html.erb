@@ -1,7 +1,7 @@
 <div id="post_show_container">
   <div id="post_show_container_upper">
   <div id="post_show_container_header">
-    <h3>Post #<%= @post.id%> by <%=@user.Name%></h3>
+    <h3>Post #<%= @post.id%> by <%=@user.Name%> Title: <%= @post.Title%></h3>
     <h5>Comments:<%= @post.CommentsCounter%> Likes: <%=@post.LikesCounter%></h5>
   </div>
   <p><%= @post.Text %></p>
