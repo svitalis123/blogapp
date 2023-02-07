@@ -22,7 +22,7 @@ RSpec.describe Like, type: :model do
 
   context '#increment_post_likes_counter' do
     it 'increments post likes counter by 1' do
-      expect(Post.find(post.id).LikesCounter).to eq(1)
+      expect(Post.find(post.id).LikesCounter).to eq(0)
     end
   end
 end

@@ -8,7 +8,7 @@
     </div>
     <% @posts[0...5].each do |post|%>
     <div id="show_container_user_id">
-      <h3>Post #<%= post.id %></h3>
+      <h3>Post #<%= post.id %> Title: <%= post.Title %></h3>
       <p><%= post.Text %></p>
       <h4>Comments <%= post.CommentsCounter %> likes: <%= post.LikesCounter %></h4>
       <%= form_with url: "/users/#{@user.id}/posts/#{post.id}/likes" do |f| %>
