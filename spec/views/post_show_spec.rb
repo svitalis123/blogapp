@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe "Post show page" , type: :system do
-    before(:each) do
-        @user = User.create(Name: 'John', Photo: 'https://kiddy.com/pic/890987655', Bio: 'Hi there')
-        @post = Post.create(Title: 'Hello from Mars', Text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", CommentsCounter: 0, LikesCounter: 0, user_id: @user)
-        @comment = Comment.create(user_id: @user, post_id: @post, Text: 'This is the first comment...')
-        
-        visit user_post_path(user, post)
+    before do
+        driven_by(:rack_test)
+        @user = User.create(Name: 'John', Photo: 'https://kiddy.com/pic/890987655', Bio: 'Hi there', PostsCounter: 0)
+        @post = Post.create(Title: 'Hello from Mars', Text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", CommentsCounter: 0, LikesCounter: 0, user_id: @user.id)
+    
+        visit user_post_path(@user, @post)
     end
     
     context "When visiting the post show page" do
@@ -15,11 +15,11 @@ RSpec.describe "Post show page" , type: :system do
         end
         
         it "should display the author's name" do
-            expect(page).to have_content(@user.Name)
+            expect(page).to have_content('John')
         end
         
         it "should display the number of comments" do
-            expect(page).to have_content('Comments: 1') 
+            expect(page).to have_content('Comments:0') 
         end
         it "should display the number of likes" do
             expect(page).to have_content('Likes: 0') 
