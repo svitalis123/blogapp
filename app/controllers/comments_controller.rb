@@ -7,10 +7,10 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @user = current_user
+    @user = User.find(params[:user_id])
     @post = Post.find(params[:post_id])
     @comment = @user.comments.new(handle_params)
-    @comment.user_id = current_user.id
+    @comment.user_id = @user.id
     @comment.post_id = params[:post_id]
     if @comment.save
       flash[:success] = 'Succesfully created a comment'

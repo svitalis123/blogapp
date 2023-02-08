@@ -98,7 +98,8 @@ Clone this repository to your desired folder:
 
 git clone https://github.com/svitalis123/blogapp.git
 ### Install
-
+- rails db:create
+- rails db:migrate
 Install this project with:
 - Rspecs
 ### Usage
@@ -111,7 +112,7 @@ Install this project with:
 
 ### Run tests
 
-bin/rails test test/models/article_test.rb
+rspec spec/foldername/test_name_spec
 <!--
 Example command:
 
@@ -129,12 +130,16 @@ Example command:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
+👤 **Vitalis Mutwiri**
 
 - GitHub: [@svitalis123](https://github.com/svitalis123)
 - Twitter: [@WilsonVitalis](https://twitter.com/WilsonVitalis)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/vitalismutwiri)
 
+👤 **Dave Zagabe**
+- GitHub: [@daveZag](https://github.com/daveZag)
+- Twitter: [@davezagabe2](https://twitter.com/davezagabe2)
+- LinkedIn: [@davezagabe](https://www.linkedin.com/in/davezagabe/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
