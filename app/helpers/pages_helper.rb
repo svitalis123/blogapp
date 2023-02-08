@@ -1,2 +1,2 @@
-module PagesHelper
+module PagesHelper # rubocop:disable Layout/EndOfLine
 end

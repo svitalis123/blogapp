@@ -12,6 +12,7 @@ class PostsController < ApplicationController
   end
 
   def create
+    current_user = User.find(params[:user_id])
     @post = Post.new(helper_params)
     @post.user_id = current_user.id
     @post.CommentsCounter = 0

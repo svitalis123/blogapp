@@ -1,5 +1,9 @@
     <div id="container_container">
-      <img id="container_container_img" src="<%= user.Photo %>" alt="user profile">
+     <% if user.Photo?%>
+        <img id="container_container_img" src="<%= user.Photo %>" alt="user profile">
+      <% else %>
+        <img id="container_container_img" src="https://img.freepik.com/free-photo/fun-backpacker-german-shepherd-dog-cartoon-character_183364-80975.jpg?size=338&ext=jpg&ga=GA1.2.1392401042.1675851204" alt="user profile">
+      <%end%>
       <div id="container_container_div">
         <h3><%= link_to user.Name, "/users/#{user.id}"%></h3>
         <p>Number of posts: <%= user.PostsCounter %></p>
