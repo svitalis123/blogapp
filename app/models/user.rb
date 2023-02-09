@@ -10,6 +10,7 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :encrypted_password, presence: true
   validates :PostsCounter, presence: true, numericality: { greater_than_or_equal_to: 0 }
+
   def admin?(requested_role)
     role == requested_role.to_s
   end
