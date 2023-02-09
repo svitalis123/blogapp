@@ -1,13 +1,21 @@
 <div id="container_index_posts">
   <div id="container_container">
-      <img id="container_container_img" src="<%= @user.Photo %>" alt="user profile">
+      <% if @user.Photo?%>
+       <img id="container_container_img" src="<%= @user.Photo %>" alt="user profile">
+      <% else %>
+       <img id="container_container_img" src="https://img.freepik.com/free-photo/fun-backpacker-german-shepherd-dog-cartoon-character_183364-80975.jpg?size=338&ext=jpg&ga=GA1.2.1392401042.1675851204" alt="user profile">
+      <%end%>
       <div id="container_container_div">
         <h3><%= @user.Name %></h3>
         <p>Number of posts: <%= @user.PostsCounter %></p>
+        
       </div>
     </div>
     <% @posts[0...5].each do |post|%>
     <div id="show_container_user_id">
+      <% if can? :destroy, post %>
+        <%= button_to "Delete Post", user_post_path(@user.id, post.id), :method => :delete %>
+      <% end %>
       <h3>Post #<%= post.id %> Title: <%= post.Title %></h3>
       <p><%= post.Text %></p>
       <h4>Comments <%= post.CommentsCounter %> likes: <%= post.LikesCounter %></h4>

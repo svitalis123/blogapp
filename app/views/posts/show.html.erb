@@ -10,6 +10,9 @@
   <div id="container_index_posts_show_comments_container">
     <% @comments.each do |comment| %>
       <p><%=@user.Name%>: <%= comment.id %>  Comment: <%= comment.Text %></p>
+      <% if can? :destroy, comment %> 
+        <%= button_to "Delete comment", user_post_comment_path(@post.user_id, @post.id, comment.id), method: :delete, data: {confirm: "confirm to delete"} %>
+      <% end %>
     <% end %>
   </div>
 </div>
